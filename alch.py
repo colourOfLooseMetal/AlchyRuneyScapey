@@ -133,6 +133,7 @@ def check_Alch_state_inv_or_magic():
     #left  top width height
     im = pyautogui.screenshot(region=(1726,589,489,263))
     im = np.array(im)[:, :, :3]  # Get first 3 channel from image as numpy array.
+    # print("pooPooPeeePee")
     # cv2.imshow("im",im)
     # cv2.waitKey(0)
     # cv2.destroyAllWindows()
@@ -146,7 +147,7 @@ def check_Alch_state_inv_or_magic():
     # cv2.waitKey(0)
     #check percentage of the image that  is within this range
     print((Mask > 0).mean())
-    if (Mask > 0).mean() > 0.87:
+    if (Mask > 0).mean() > 0.82:
         return("inv")#inv
     else:
         return("magic")#magic
